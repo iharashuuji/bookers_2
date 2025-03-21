@@ -17,12 +17,11 @@
     <%= link_to '投稿フォーム', new_post_image_path %>
   </li>
   <li>
-    <%= link_to "ログアウト", destroy_path(current_user_idb) %>
+    <%= link_to 'マイページ', user_path(current_user.id) %>
   </li>
-
   <li>
-      <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-    </li>
+    <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+  </li>
   <% else %>
     <li>
       <%= link_to "新規登録", new_user_registration_path %>
